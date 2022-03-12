@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="guestWindow">
+    <property name="width-request">1280</property>
+    <property name="height-request">720</property>
+    <property name="can-focus">False</property>
+    <property name="window-position">center-always</property>
+    <child>
+      <object class="GtkFixed" id="fixed3">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkImage" id="background3">
+            <property name="width-request">500</property>
+            <property name="height-request">720</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">Picture\Food.jfif</property>
+          </object>
+          <packing>
+            <property name="x">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="welcome3">
+            <property name="name">welcomeText</property>
+            <property name="width-request">659</property>
+            <property name="height-request">56</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Welcome to F-code Restaurant</property>
+            <attributes>
+              <attribute name="font-desc" value="Times New Roman, Bold 30"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">557</property>
+            <property name="y">110</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="guestText">
+            <property name="width-request">100</property>
+            <property name="height-request">38</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Guest</property>
+            <attributes>
+              <attribute name="font-desc" value="Times New Roman, 20"/>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">819</property>
+            <property name="y">221</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="guestName">
+            <property name="width-request">467</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="caps-lock-warning">False</property>
+            <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
+            <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
+            <property name="placeholder-text" translatable="yes">Fullname</property>
+            <property name="input-purpose">name</property>
+            <signal name="changed" handler="on_guestName_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">634</property>
+            <property name="y">322</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="confirmButton">
+            <property name="label" translatable="yes">Confirm</property>
+            <property name="width-request">100</property>
+            <property name="height-request">34</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_confirmButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">1000</property>
+            <property name="y">463</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="table">
+            <property name="width-request">467</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="placeholder-text" translatable="yes">Table</property>
+            <property name="input-purpose">number</property>
+            <signal name="changed" handler="on_table_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">638</property>
+            <property name="y">388</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="guestBackButton">
+            <property name="label" translatable="yes">Back</property>
+            <property name="name">backButton</property>
+            <property name="width-request">100</property>
+            <property name="height-request">34</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_guestBackButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">635</property>
+            <property name="y">463</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

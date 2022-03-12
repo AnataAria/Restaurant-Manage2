@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="loginWindow">
+    <property name="name">background</property>
+    <property name="width-request">1280</property>
+    <property name="height-request">720</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">F-Code Restaurant</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">start-here</property>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel" id="welcome1">
+            <property name="name">welcomeText</property>
+            <property name="width-request">700</property>
+            <property name="height-request">75</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Welcome to F-Code Restaurant</property>
+            <attributes>
+              <attribute name="font-desc" value="Roboto Medium, Medium 30"/>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">530</property>
+            <property name="y">146</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage" id="background1">
+            <property name="width-request">500</property>
+            <property name="height-request">720</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">Picture\background.jpg</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="question">
+            <property name="name">questionText</property>
+            <property name="width-request">574</property>
+            <property name="height-request">61</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Are you the manager or guest ?</property>
+            <attributes>
+              <attribute name="font-desc" value="Roboto Light, Light 25"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">613</property>
+            <property name="y">243</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="guestButton">
+            <property name="name">GuestButton</property>
+            <property name="width-request">182</property>
+            <property name="height-request">242</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_guestButton_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage">
+                <property name="width-request">134</property>
+                <property name="height-request">203</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixbuf">Picture\icon1.png</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">671</property>
+            <property name="y">360</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="managerButton">
+            <property name="label" translatable="yes">Manager</property>
+            <property name="name">ManagerButton</property>
+            <property name="width-request">182</property>
+            <property name="height-request">242</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_managerButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">917</property>
+            <property name="y">359</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

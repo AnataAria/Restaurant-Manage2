@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="orderWindow">
+    <property name="width-request">1280</property>
+    <property name="height-request">720</property>
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="fixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkBox" id="sidebar">
+            <property name="width-request">100</property>
+            <property name="height-request">720</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkFixed" id="fixed1">
+                <property name="width-request">100</property>
+                <property name="height-request">720</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkButton" id="quitButton">
+                    <property name="width-request">59</property>
+                    <property name="height-request">57</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Picture\QuitButton.png</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">13</property>
+                    <property name="y">652</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage">
+                    <property name="width-request">70</property>
+                    <property name="height-request">70</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="pixbuf">Picture\Order.png</property>
+                  </object>
+                  <packing>
+                    <property name="x">12</property>
+                    <property name="y">13</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="homeButton">
+                    <property name="width-request">20</property>
+                    <property name="height-request">60</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Picture\HomeButton.png</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">11</property>
+                    <property name="y">111</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStackSwitcher" id="switcher">
+            <property name="name">switcher</property>
+            <property name="width-request">244</property>
+            <property name="height-request">34</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <property name="icon-size">0</property>
+            <property name="stack">stack1</property>
+          </object>
+          <packing>
+            <property name="x">548</property>
+            <property name="y">29</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box1">
+            <property name="width-request">400</property>
+            <property name="height-request">97</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkFixed">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkButton" id="confirmOrderButton">
+                    <property name="label" translatable="yes">Confirm order</property>
+                    <property name="width-request">158</property>
+                    <property name="height-request">42</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="relief">none</property>
+                    <signal name="clicked" handler="on_confirmOrderButton_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">25</property>
+                    <property name="y">24</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="removeButton">
+                    <property name="label" translatable="yes">Remove dishes</property>
+                    <property name="width-request">158</property>
+                    <property name="height-request">42</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="relief">none</property>
+                    <signal name="clicked" handler="on_removeButton_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">220</property>
+                    <property name="y">25</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">856</property>
+            <property name="y">617</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scroll1">
+            <property name="width-request">400</property>
+            <property name="height-request">550</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="shadow-type">in</property>
+            <child>
+              <object class="GtkViewport" id="view1">
+                <property name="width-request">400</property>
+                <property name="height-request">550</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <!-- n-columns=1 n-rows=1 -->
+                  <object class="GtkGrid" id="ordersGrid">
+                    <property name="width-request">400</property>
+                    <property name="height-request">550</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">853</property>
+            <property name="y">74</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStack" id="stack1">
+            <property name="width-request">632</property>
+            <property name="height-request">600</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="transition-type">slide-right</property>
+            <child>
+              <!-- n-columns=3 n-rows=2 -->
+              <object class="GtkGrid" id="menuGrid1">
+                <property name="name">menuGrid</property>
+                <property name="width-request">632</property>
+                <property name="height-request">600</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="row-spacing">58</property>
+                <property name="column-spacing">40</property>
+                <property name="row-homogeneous">True</property>
+                <property name="column-homogeneous">True</property>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton1">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton1_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage1">
+                        <property name="name">dishImage1</property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\Salmon.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">42</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName1">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Salmon</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice1">
+                        <property name="width-request">89</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">60000</property>
+                      </object>
+                      <packing>
+                        <property name="x">49</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton2">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton2_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage2">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\ChickenFriedRice.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">43</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName2">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Fried Rice</property>
+                      </object>
+                      <packing>
+                        <property name="x">42</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice2">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">45000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton3">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton3_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage3">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\Spaghetti.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">44</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName3">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Spaghetti</property>
+                      </object>
+                      <packing>
+                        <property name="x">43</property>
+                        <property name="y">107</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice3">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">45000</property>
+                      </object>
+                      <packing>
+                        <property name="x">44</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton4">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton4_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage4">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\Mussel.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName4">
+                        <property name="width-request">71</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Mussel</property>
+                      </object>
+                      <packing>
+                        <property name="x">54</property>
+                        <property name="y">110</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice4">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">50000</property>
+                      </object>
+                      <packing>
+                        <property name="x">40</property>
+                        <property name="y">153</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton5">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton5_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage5">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\PhoBo.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName5">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Pho Bo</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">106</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice5">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">50000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton6">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton6_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage6">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\PumpkinSoup.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName6">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Pumpkin Soup</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">106</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice6">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">50000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page1</property>
+                <property name="title" translatable="yes">Page 1</property>
+              </packing>
+            </child>
+            <child>
+              <!-- n-columns=3 n-rows=2 -->
+              <object class="GtkGrid" id="menuGrid2">
+                <property name="name">menuGrid</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="row-spacing">58</property>
+                <property name="column-spacing">40</property>
+                <property name="row-homogeneous">True</property>
+                <property name="column-homogeneous">True</property>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton7">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton7_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage7">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\Salad.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName7">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Salad</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice7">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">35000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">151</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton8">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton8_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage8">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\ApplePie.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName8">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Apple Pie</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice8">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">40000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">153</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton9">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton9_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage9">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\EggBenedict.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName9">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Egg Benedict</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice9">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">50000</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton10">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton10_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage10">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\SpringRoll.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName10">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Spring Rolls</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice10">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">35000</property>
+                      </object>
+                      <packing>
+                        <property name="x">44</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton11">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton11_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage11">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\GrilledPork.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName11">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Grilled Pork</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice11">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">60000</property>
+                      </object>
+                      <packing>
+                        <property name="x">44</property>
+                        <property name="y">152</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFixed">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="margin-top">20</property>
+                    <child>
+                      <object class="GtkButton" id="orderButton12">
+                        <property name="label" translatable="yes">Order </property>
+                        <property name="width-request">100</property>
+                        <property name="height-request">44</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="relief">none</property>
+                        <signal name="clicked" handler="on_orderButton12_clicked" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">202</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="dishImage12">
+                        <property name="width-request">100</property>
+                        <property name="height-request">100</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pixbuf">Dish\Steak.png</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishName12">
+                        <property name="width-request">100</property>
+                        <property name="height-request">47</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">Beefsteak</property>
+                      </object>
+                      <packing>
+                        <property name="x">41</property>
+                        <property name="y">105</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="dishPrice12">
+                        <property name="width-request">100</property>
+                        <property name="height-request">36</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">70000</property>
+                      </object>
+                      <packing>
+                        <property name="x">42</property>
+                        <property name="y">149</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="left-attach">2</property>
+                    <property name="top-attach">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page2</property>
+                <property name="title" translatable="yes">Page 2</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">160</property>
+            <property name="y">96</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">41</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Order #</property>
+          </object>
+          <packing>
+            <property name="x">855</property>
+            <property name="y">24</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="orderNumber">
+            <property name="width-request">100</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <attributes>
+              <attribute name="font-desc" value="Times New Roman, Bold 13"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">907</property>
+            <property name="y">26</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

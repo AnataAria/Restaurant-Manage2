@@ -1,0 +1,60 @@
+#dishName
+{
+  margin-left: 200px;
+}
+
+#dishPrice
+{
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+#image
+{
+  margin-top: 60px;
+}
+
+#quantity
+{
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+button
+{
+  border: none;
+  padding: 0px;
+  background-image: none;
+  background-color: #ea7c69;
+  font-family: Barlow;
+  color: #FFFFFF;
+}
+
+label 
+{
+  font-family: Barlow;
+  color: #FFFFFF;
+}
+
+
+window
+{
+  background-color: #252836;
+}
+
+#menuGrid
+{
+  background-color: #1f1d2b;
+  border-radius: 20px;
+}
+
+#switcher
+{
+  color: transparent;
+}
+
+
+
+
+
+

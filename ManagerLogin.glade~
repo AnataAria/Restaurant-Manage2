@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="managerLogin">
+    <property name="width-request">1280</property>
+    <property name="height-request">720</property>
+    <property name="can-focus">False</property>
+    <property name="window-position">center-always</property>
+    <child>
+      <object class="GtkFixed" id="fixed2">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkImage" id="background2">
+            <property name="width-request">500</property>
+            <property name="height-request">720</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="pixbuf">Picture\Food.jfif</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="managerLoginText">
+            <property name="width-request">245</property>
+            <property name="height-request">61</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Manager Login</property>
+            <attributes>
+              <attribute name="font-desc" value="Agency FB 30"/>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">743</property>
+            <property name="y">224</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="username">
+            <property name="width-request">467</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-width-chars">0</property>
+            <property name="placeholder-text" translatable="yes">Username</property>
+            <property name="input-purpose">name</property>
+          </object>
+          <packing>
+            <property name="x">632</property>
+            <property name="y">305</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="signInButton">
+            <property name="label" translatable="yes">Sign in</property>
+            <property name="width-request">79</property>
+            <property name="height-request">34</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+          </object>
+          <packing>
+            <property name="x">1015</property>
+            <property name="y">452</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="password">
+            <property name="width-request">467</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-width-chars">0</property>
+            <property name="secondary-icon-activatable">False</property>
+            <property name="secondary-icon-sensitive">False</property>
+            <property name="placeholder-text" translatable="yes">Password</property>
+            <property name="input-purpose">password</property>
+          </object>
+          <packing>
+            <property name="x">632</property>
+            <property name="y">377</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="welcome2">
+            <property name="width-request">700</property>
+            <property name="height-request">75</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Welcome to F-code Restaurant</property>
+            <attributes>
+              <attribute name="font-desc" value="Times New Roman, Bold 30"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">519</property>
+            <property name="y">144</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="managerBackButton">
+            <property name="label" translatable="yes">Back</property>
+            <property name="width-request">100</property>
+            <property name="height-request">34</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_managerBackButton_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">632</property>
+            <property name="y">452</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
